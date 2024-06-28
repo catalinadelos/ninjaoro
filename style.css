@@ -1,0 +1,28 @@
+nav {
+  background-color:black;
+  
+  }
+  
+  
+  body {
+    background-image: url("https://media.gettyimages.com/id/1278930101/video/falling-dollar-sign.jpg?s=640x640&k=20&c=IQc3QvmlbopFEOftG4YdvsMvDJalqqdKtv6Imf3X-8c=");
+  }
+  
+  footer {
+    padding: 20px 0;
+    /* Espaciado interno */
+    text-align: center;
+    /* Texto centrado */
+    color: white;
+    /* Color de texto para el pie de página */
+  }
+  
+  .card {
+    background-color: #D5D8DC;
+    border: #17202A 3px solid;
+  }
+  
+  #inputt {
+    background-color:yellow;
+  }
+  
