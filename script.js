@@ -1,3 +1,16 @@
+
+
+function resetear () {
+  $('#oros').attr('value', 0)
+  $('#lista-mensajes').html('');
+  // document.getElementById('oros').value = 0;
+
+    // 3. Volvemos a guardar los datos
+    localStorage.setItem('oros', '')
+    localStorage.setItem('mensajes', '')
+}
+
+
 function ganar (event, lugar) {
     event.preventDefault()
     console.log("lleganding desde " + lugar);
@@ -33,9 +46,9 @@ function ganar (event, lugar) {
   
   function generarMensaje(nuevosOros, lugar) {
     if (nuevosOros < 0) {
-      return `Ha perdido ${nuevosOros} en ${lugar}`
+      return `Ha perdido ${nuevosOros} oros en ${lugar}`
     } else {
-      return `Ha ganado ${nuevosOros} en ${lugar}`
+      return `Ha ganado ${nuevosOros} oros en ${lugar}`
     }
   }
   
@@ -61,9 +74,10 @@ function ganar (event, lugar) {
     $('#lista-mensajes').html('');
     for (let mensaje of mensajes) {
       $('#lista-mensajes').append(`
-        <h5 class="text-center">
+        <h6 class="mensajes border border-success rounded-4 text-center">
           ${mensaje}
-        </h5>
+        </h6>
+        <br>
       `)
     }
   }
@@ -81,10 +95,15 @@ function ganar (event, lugar) {
     $('#lista-mensajes').html('');
     for (let mensaje of mensajes) {
       $('#lista-mensajes').append(`
-        <h5 class="text-center">
-          ${mensaje}
-        </h5>
+          <p class="mensajes border border-success rounded-4 text-center">
+            ${mensaje}
+          </p>
+          <br>
+    
       `)
     }
   }
+  
+
+
   inicia_pagina()

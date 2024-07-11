@@ -1,28 +1,75 @@
-nav {
-  background-color:black;
+body {
+  background-color:#54bbc8;
+  font-family: 'Righteous';
+  font-size: 16px;
+}
+section {
+  background:#54bbc8;
+}
+
+#logo-pagina {
+  background-color:#f49600;
+  text-align: center;
+}
+
+footer {
+  padding: 15px 0;
+  text-align: center;
+  background-color:darkslategrey;
+  font-size: 16px;
+  color:#fff;
+}
+
+.card {
+  background-color:white;
+  color:darkcyan;
+  border-width: 3px;
+  border-color:darkgrey;
+}
   
-  }
+
+#score{
+  padding-bottom: 10px;
+  text-align: center;
+  padding-top:  10px;
   
+}
+.etiqueta-score{
+  background-color: white;
+  color:darkcyan;
+  font-size: 22px;
+}
+
+#oros{
+  color:darkcyan;
+  font-size: 22px;
+}
+
+.formato-listado{
+  color:#fff;
+  text-align: center;
+}
+.titulo-listado{
+  text-align: center;
+}
+
+.btn{
+  color:#fff;
+  border-color: yellowgreen;
+
   
-  body {
-    background-image: url("https://media.gettyimages.com/id/1278930101/video/falling-dollar-sign.jpg?s=640x640&k=20&c=IQc3QvmlbopFEOftG4YdvsMvDJalqqdKtv6Imf3X-8c=");
-  }
+}
+.btn:hover{
+  background-color:yellow;
+  color:#fff;
+}
+.mensajes{
+  font-size: 20px;
+  margin-bottom: 10px;
+  display: inline-block;
+  background-color:mediumturquoise;
+  padding-bottom: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
   
-  footer {
-    padding: 20px 0;
-    /* Espaciado interno */
-    text-align: center;
-    /* Texto centrado */
-    color: white;
-    /* Color de texto para el pie de página */
-  }
-  
-  .card {
-    background-color: #D5D8DC;
-    border: #17202A 3px solid;
-  }
-  
-  #inputt {
-    background-color:yellow;
-  }
-  
+}

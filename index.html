@@ -5,109 +5,137 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>NINJAORO</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet'>
   </head>
   <body>
-    <nav class=" navbar bg-dark ">
-      <div class="container-fluid">
-        <div class="navbar-brand text-warning mx-auto d-block " href="#">
-          <h1 class="titulo1 text-warning mx-auto d-block">NINJA ORO</h1>
-        </div>
 
-      </div>
-    </nav>
-    <form action="/Game/NinjaOro" method="post" class=" col-md-12  ">
-      <div id="inputt" class="card">
-        <div class="card-body">
-          <h5 class="counter card-title">Oro Disponible:
-            <input class="card" type="text" style="background-color:transparent; " name="oro"
-              value="0" id="oros">
-          </h5>
-        </div>
-      </div>
-    </form>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <div class="card">
-            <img src="https://media.tenor.com/XF4caftz0fQAAAAM/cow-farm.gif" class="card-img-top"
-              alt="...">
-            <form action="/Game/NinjaOro" method="post" class="card-body">
-              <h5 class="card-title">1.-Granja</h5>
-              <p class="card-text">Gana de 10 a 20 monedas de oro.</p>
-              <input type="hidden" name="lugar" value="granja">
-              <button class="btn btn-warning" value="Obten tu recompensa!" onclick="ganar(event, 'Granja')">Obtén tu recompensa</button>
-            </form>
+    <section class="container">
+      <header>
+        <div class="container">
+          <div class="col">
+            <div class="row">
+              <div id="logo-pagina">
+                <img src="img/lego/ninja-logo.jpg" width="150">
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col-md-3">
-          <div class="card">
-            <img src="https://media.tenor.com/aAp8_fma3RAAAAAM/cave-hole.gif"
-              class="card-img-top" alt="...">
-            <form action="/Game/NinjaOro" method="post" class="card-body">
-              <h5 class="card-title">2.-Caverna</h5>
-              <p class="card-text">Gana de 5 a 10 monedas de oro.</p>
-              <input type="hidden" name="lugar" value="caverna">
-              <button class="btn btn-warning" value="Obten tu recompensa!" onclick="ganar(event, 'Caverna')">Obtén tu recompensa</button>
-            </form>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card">
-            <img
-              src="https://media.tenor.com/KaCUHzQxVWcAAAAM/house.gif"
-              class="card-img-top" alt="...">
-            <form action="/Game/NinjaOro" method="post" class="card-body">
-              <h5 class="card-title">3.-Casa</h5>
-              <p class="card-text">Gana de 2 a 5 monedas de oro.</p>
-              <input type="hidden" name="lugar" value="casa">
-              <button class="btn btn-warning" value="Obten tu recompensa!" onclick="ganar(event, 'Casa')">Obtén tu recompensa</button>
-            </form>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card">
-            <img src="https://media.tenor.com/_yoDqyYP8aYAAAAM/casino77-slot-machine.gif"
-              class="card-img-top" alt="...">
-            <form action="/Game/NinjaOro" method="post" class="card-body">
-              <h5 class="card-title">4.-Casino</h5>
-              <p class="card-text">Pierde de -50 o gana 50 monedas de oro.</p>
-              <input type="hidden" name="lugar" value="casino">
-              <button class="btn btn-warning" value="Obten tu recompensa!" onclick="ganar(event, 'Casino')">Obtén tu recompensa</button>
-            </form>
-          </div>
-        </div>
-      </div>
+      </header>
 
-      <div class="row mt-3">
-        <div class="col-6 offset-3">
-          <div class="p-4 border-black rounded bg-warning" id="lista-mensajes">
-            <h5 class="text-center">
-              Mensaje 1
-            </h5>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-
-    <footer>
       <div class="container">
-        <p>¡Gracias por visitar NinjaOro!</p>
+        <div class="row">
+          <div class="col-md-3">
+            <div id="score" class="input-group">  
+              <span class="input-group-text etiqueta-score">
+                <img src="img/pixeles/coin.gif" width="50">
+                Oro Disponible:
+              </span>
+              <input type="text" class="form-control" name="oro" value="0" id="oros" readonly>
+            </div>
+          </div>
+          <div class="col-md-3 p-2">
+            <button class="btn btn-lg btn-warning p-3" onclick="resetear()">
+              Resetear
+            </button>
+            
+          </div>
+        </div>
 
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card">
+              <img src="img/lego/granja.jpg" class="card-img-top" alt="...">
+              <form action="/Game/NinjaOro" method="post" class="card-body">
+                <h5 class="card-title">1.-Granja</h5>
+                <p class="card-text">Gana de 10 a 20 monedas de oro.</p>
+                <div class="text-center">
+                  <input type="hidden" name="lugar" value="granja">
+                  <button class="btn btn-lg btn-warning" value="Obten tu recompensa!" onclick="ganar(event, 'Granja')">Obtén tu recompensa</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img src="img/lego/caverna.jpg" class="card-img-top" alt="...">
+              <form action="/Game/NinjaOro" method="post" class="card-body">
+                <h5 class="card-title">2.-Caverna</h5>
+                <p class="card-text">Gana de 5 a 10 monedas de oro.</p>
+                <div class="text-center">
+                  <input type="hidden" name="lugar" value="caverna">
+                  <button class="btn btn-lg btn-warning" value="Obten tu recompensa!" onclick="ganar(event, 'Caverna')">
+                    Obtén tu recompensa
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img src="img/lego/casa.jpg" class="card-img-top" alt="...">
+              <form action="/Game/NinjaOro" method="post" class="card-body">
+                <h5 class="card-title">3.-Casa</h5>
+                <p class="card-text">Gana de 2 a 5 monedas de oro.</p>
+                <div class="text-center">
+                  <input type="hidden" name="lugar" value="casa">
+                  <button class="btn btn-lg btn-warning" value="Obten tu recompensa!" onclick="ganar(event, 'Casa')">
+                    Obtén tu recompensa
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <img src="img/lego/casino.jpg" class="card-img-top" alt="...">
+              <form action="/Game/NinjaOro" method="post" class="card-body">
+                <h5 class="card-title">4.-Casino</h5>
+                <p class="card-text">
+                  Gana o pierde de 50 a -50 oros.
+                </p>
+                <div class="text-center">
+                  <input type="hidden" name="lugar" value="casino">
+                  <button class="btn btn-lg btn-warning" value="Obten tu recompensa!" onclick="ganar(event, 'Casino')">
+                    Obtén tu recompensa
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
-    </footer>
+
+      
+
+      <div class="row justify-content-center">
+        <div class="col-4">
+          <h2 class="formato-listado">Lista de Actividad</h2>
+          <div id="lista-mensajes" class="formato-listado">
+            
+            <h2>Lista de Actividad</h2>
+            <p>
+              Mensaje 1
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <img src="img/pixeles/fondo.png">
+      </div>
+
+      <footer>
+        <div class="copyright text-center ">
+          <p>© <span>Copyright</span> All right reserved.</p>
+        </div>
+      </footer>
+
+    </section>
 
 
-
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="script.js"></script>
   </body>
 
