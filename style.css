@@ -23,27 +23,20 @@ footer {
 .card {
   background-color:white;
   color:darkcyan;
-  border-width: 3px;
-  border-color:darkgrey;
+  border-width: 10px;
+  border-color:#75c1cb;
 }
   
 
-#score{
+.score{
   padding-bottom: 10px;
-  text-align: center;
+  text-align:center;
   padding-top:  10px;
-  
-}
-.etiqueta-score{
   background-color: white;
   color:darkcyan;
-  font-size: 22px;
+  font-size: 18px;
 }
 
-#oros{
-  color:darkcyan;
-  font-size: 22px;
-}
 
 .formato-listado{
   color:#fff;
@@ -56,9 +49,8 @@ footer {
 .btn{
   color:#fff;
   border-color: yellowgreen;
-
-  
 }
+
 .btn:hover{
   background-color:yellow;
   color:#fff;

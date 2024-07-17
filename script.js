@@ -9,8 +9,7 @@ function resetear () {
     localStorage.setItem('oros', '')
     localStorage.setItem('mensajes', '')
 }
-
-
+// funcion para ganar oros nuevo
 function ganar (event, lugar) {
     event.preventDefault()
     console.log("lleganding desde " + lugar);

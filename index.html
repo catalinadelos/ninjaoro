@@ -17,7 +17,7 @@
           <div class="col">
             <div class="row">
               <div id="logo-pagina">
-                <img src="img/lego/ninja-logo.jpg" width="150">
+                <img src="img/lego/ninja-logo.jpg" width="191">
               </div>
             </div>
           </div>
@@ -26,25 +26,22 @@
 
       <div class="container">
         <div class="row">
-          <div class="col-md-3">
-            <div id="score" class="input-group">  
-              <span class="input-group-text etiqueta-score">
-                <img src="img/pixeles/coin.gif" width="50">
-                Oro Disponible:
-              </span>
-              <input type="text" class="form-control" name="oro" value="0" id="oros" readonly>
+          <div class="col-lg-4 col-md-6 col-sm-9 col-9">
+            <div class="input-group">
+                <span class="input-group-text score">
+                  <img src="img/pixeles/coin.gif" width="45">
+                  Mis Oros:
+                </span>
+                <input type="text" class="form-control score" name="oro" value="0" id="oros" readonly>
+                <button class="btn btn-lg btn-warning p-3" onclick="resetear()">
+                  Reset
+                </button>                
             </div>
-          </div>
-          <div class="col-md-3 p-2">
-            <button class="btn btn-lg btn-warning p-3" onclick="resetear()">
-              Resetear
-            </button>
-            
           </div>
         </div>
 
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-lg-3 col-md-6 col-sm-12">
             <div class="card">
               <img src="img/lego/granja.jpg" class="card-img-top" alt="...">
               <form action="/Game/NinjaOro" method="post" class="card-body">
@@ -57,7 +54,7 @@
               </form>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-lg-3 col-md-6 col-sm-12">
             <div class="card">
               <img src="img/lego/caverna.jpg" class="card-img-top" alt="...">
               <form action="/Game/NinjaOro" method="post" class="card-body">
@@ -72,7 +69,7 @@
               </form>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-lg-3 col-md-6 col-sm-12">
             <div class="card">
               <img src="img/lego/casa.jpg" class="card-img-top" alt="...">
               <form action="/Game/NinjaOro" method="post" class="card-body">
@@ -87,7 +84,7 @@
               </form>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-lg-3 col-md-6 col-sm-12">
             <div class="card">
               <img src="img/lego/casino.jpg" class="card-img-top" alt="...">
               <form action="/Game/NinjaOro" method="post" class="card-body">
@@ -107,13 +104,10 @@
         </div>
       </div>
 
-      
-
       <div class="row justify-content-center">
-        <div class="col-4">
+        <div class="col-lg-4 col-md-12 col-sm-12">
           <h2 class="formato-listado">Lista de Actividad</h2>
           <div id="lista-mensajes" class="formato-listado">
-            
             <h2>Lista de Actividad</h2>
             <p>
               Mensaje 1
@@ -126,7 +120,7 @@
       </div>
 
       <footer>
-        <div class="copyright text-center ">
+        <div class="copyright text-center">
           <p>© <span>Copyright</span> All right reserved.</p>
         </div>
       </footer>
